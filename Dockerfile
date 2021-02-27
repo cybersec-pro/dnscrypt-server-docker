@@ -76,6 +76,8 @@ VOLUME ["/opt/encrypted-dns/etc/keys"]
 
 EXPOSE 443/udp 443/tcp 9100/tcp
 
+CMD ["/entrypoint.sh", "init"]
+
 CMD ["/entrypoint.sh", "start"]
 
 ENTRYPOINT ["/entrypoint.sh"]
